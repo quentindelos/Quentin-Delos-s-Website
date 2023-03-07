@@ -34,7 +34,7 @@ session_start();
                                 // Envoi de l'email de confirmation
                                 $to = $email;
                                 $subject = "Confirmation de votre message";
-                                $message_mail = "Bonjour " . $name . ",\r\n\r\nVotre message a bien été envoyé. Nous vous remercions pour votre intérêt et nous vous répondrons dans les plus brefs délais.\r\n\r\nCordialement,\r\nQuentin Delos.";
+                                $message_mail = "Bonjour " . $name . ",\r\n\r\nVotre message a bien été envoyé. Je vous remercie pour votre intérêt et je vous répondrai dans les plus brefs délais.\r\n\r\nCordialement,\r\nQuentin Delos.";
                                 $headers = "From: delosquentin@gmail.com";
 
                                 if(mail($to, $subject, $message_mail, $headers)){
@@ -122,8 +122,8 @@ session_start();
                     </div>
                     <div class="tab-contents active-tab" id="education">
                         <ul>
-                            <li><span>De 2022 à aujourd'hui</span><br>UFA César Baggio - Lille | BTS SNIR alternance</li>
-                            <li><span>De 2019 à 2022</span><br>Lycée César Baggio - Lille | Bac Pro SN option RISC </li>
+                            <li><span>De 2022 à aujourd'hui</span><br>UFA César Baggio - Lille<br><strong>BTS SNIR</strong> alternance</li>
+                            <li><span>De 2019 à 2022</span><br>Lycée César Baggio - Lille<br>Bac Pro SN option RISC </li>
                             <li><span>De 2016 à 2019</span><br>Collège Notre-Dame de la Providence - Orchies</li>
                         </ul>
                     </div>
@@ -141,6 +141,7 @@ session_start();
                     </div>
                     <div class="tab-contents" id="skills">
                         <ul>
+                            <li><span>2023</span><br>Habilitation électrique<br>Niveau <a href="https://www.securinorme.com/prevention-au-travail/290-quelles-sont-les-differentes-categories-dhabilitations-electriques-#:~:text=Habilitation%20%C3%A9lectrique%20BR%20%2D%20BS&text=L'habilitation%20%C3%A9lectrique%20BR%20permet,de%20maintenance%20ou%20de%20d%C3%A9pannage." target="_blank">BR</a></li>
                             <li><span>2022</span><br>Permis de conduire B</li>
                             <li><span>2022</span><br>Bac Pro SN option RISC<br>Mention Bien</li>
                             <li><span>2019</span><br>Brevet de secourisme<br>Niveau PSC1</li>
@@ -164,7 +165,7 @@ session_start();
                     <i class="fas fa-code"></i>
                     <h2>Développement web</h2>
                     <p>Étant plus jeune j'ai "connu" le monde de l'informatique grace au développement web car il se rapproche de la programmation mais réunit aussi d'autres corps des métiers de l'informatique comme la cybersécurité, l'administration réseau, la domotique et j'en passe.<br>C'est donc depuis ce temps-là que j'ai toujours eu envie de faire l'informatique mon métier.</p>
-                    <a href="/Mine-Clicker/index" target="_blank">Mine-Clicker</a>
+                    <a href="/Mine-Clicker/index" target="_blank"><strong>Mine-Clicker</strong></a>
                 </div>
                 <div>
                     <i class="fas fa-server"></i>
@@ -174,8 +175,8 @@ session_start();
                 </div>
                 <div>
                     <i class="fab fa-app-store"></i>
-                    <h2>Outils & App</h2>
-                    <p>Je manipule souvent avec Windows Server, de la programmation d'un switch ou d'un routeur jusqu'à la mise en place d'une GPO.<br>J'assure sur le côté support informatique avec GLPI etc...</p>
+                    <h2>Administration</h2>
+                    <p>Je manipule souvent avec Windows Server, de la programmation d'un switch ou d'un routeur jusqu'à la mise en place d'une <strong>GPO</strong> ou d'une <strong>AD</strong>.<br>Je maîtrise la partie support informatique grace à <strong>GLPI</strong> et autres.</p>
                     <!-- <a href="">En savoir plus</a> -->
                 </div>
             </div>
@@ -190,7 +191,7 @@ session_start();
                     <img src="/styles/img/work-1.png" alt="image de ma guitare">
                     <div class="layer">
                         <h3>Guitare</h3>
-                        <p>Depuis que j'écoute de la musique et nottement du rock / métal je me suis mis à la guitare pour pouvoir reproduire de célèbres riffs comme ceux de Rammstein ou de Nirvana et de AC/DC et j'en passe.</p>
+                        <p>Depuis que j'écoute de la musique et nottement du rock & métal, je me suis mis à la guitare pour pouvoir reproduire de célèbres riffs comme ceux  de Nirvana, Rammstein, AC/DC et j'en passe.</p>
                         <!-- <a href=""><i class="fas fa-external-link-alt"></i></a> -->
                     </div>
                 </div>
@@ -198,7 +199,7 @@ session_start();
                     <img src="/styles/img/work-2.png" alt="Photo de mon installation imprimante 3D">
                     <div class="layer">
                         <h3>Modélisation 3D</h3>
-                        <p>Comme le bricolage, le fait d'avoir abouti ton projet et de l'avoir conçu de A à Z est pour moi la satisfaction ultime.</p>
+                        <p>Comme le bricolage, le fait d'avoir abouti mon projet et de l'avoir conçu de A à Z est pour moi la satisfaction ultime.</p>
                         <!-- <a href=""><i class="fas fa-external-link-alt"></i></a> -->
                     </div>
                 </div>
@@ -206,7 +207,7 @@ session_start();
                     <img src="/styles/img/work-3.png" alt="image de mon pc gamer">
                     <div class="layer">
                         <h3>Sport</h3>
-                        <p>J'aime énormément le sport, étant petit j'ai commencé par du foot puis rapidement je me suis m'y aux arts martiaux.<br>À commencer par du karaté pendant une année puis de la boxe Thaïlandaise durant 4 ans.<br>À l'heure actuelle, je suis inscrit dans une salle de musculation depuis l'an dernier.</p>
+                        <p>De nature sportif, petit j'ai commencé par du foot puis rapidement je me suis m'y aux arts martiaux.<br>À commencer par du karaté ainsi que de la boxe Thaïlandaise.<br>Actuellement, je suis inscrit dans une salle de musculation.</p>
                     </div>
                 </div>
             </div>
@@ -239,7 +240,8 @@ session_start();
 <!-- ------------------ Footer ------------------ -->
 <div class="copyright">
     <p>Copyright © Quentin. Made by Quentin Delos for personal use</p>
-    <a href="/pages/espace-membre">Espace membres</a>
+    <br>
+    <a href="/pages/espace_snir">Espace SNIR</a> | <a href="/pages/espace_membre">Espace Membre</a>
 </div>
     <!-- Changement de colonnes dans la présentation -->
     <script src="/scripts/index.js"></script>

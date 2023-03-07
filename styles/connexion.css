@@ -55,7 +55,6 @@ body.active{
     box-shadow: 0 5px 45px rgba(0,0,0,0.25);
     transition: ease-in-out .5s;  
     overflow: hidden;
-    
 }
 .form-box.active{
     left: 50%;
@@ -78,7 +77,7 @@ body.active{
 .form-box .form{
     position: absolute;
     width: 80%;
-    transition: .5s;
+    transition: .3s;
     padding: 50px;
 }
 .form-box .signinform{
@@ -94,7 +93,7 @@ body.active{
 }
 .form-box.active .signupform{
     left: 0%;
-    transition-delay: .25s;
+    transition-delay: .1s;
 }
 .form-box .form form{
     display: flex;
@@ -127,34 +126,47 @@ body.active{
     color: #fff;
     cursor: pointer;
 }
+.btnbefore{
+    visibility: hidden;
+}
 /* ------------------ Responsive parts ------------------ */
 @media only screen and (max-width:600px){
     *{
-        font-size: 10px;
-    }
-    .container{
-        width: 100%;
-        height: auto;
-        margin: 0;
-    }
-    .orangeBG{
-        height: auto;
+        font-size: 13px;
     }
     .orangeBG .box{
         width: 100%;
-        height: auto;
     }
     .form-box{
         width: 100%;
-        height: auto;
-        position: relative;
+        top: -5%;
+    }
+    .form-box .form{
+        width: 70%
+    }
+    .box{
+        display: block;
+        justify-content: center;
+        align-items: center;
     }
     .form-box.active{
         left: 0;
+        height: 110%;
     }
-    .form-box .form{
-        position: static;
-        width: 100%;
-        padding: 20px;
-    }    
+    .formboxafter{
+        left: 0;
+    }
+    .btnbefore{
+        visibility: inherit;
+    }
+    .signinbtnafter{
+        position: relative;
+        left: 70%;
+    }
+    .signinbtnafter, .signupbtnafter{
+        background: #fff;
+        border: 1px solid #ababab;
+        padding: 10px 10px;
+        border-radius: 6px;
+    }
 }

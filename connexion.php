@@ -1,11 +1,17 @@
 <?php
 session_start();
+if(isset($_SESSION["name"])){
+    header("Location: /pages/espace_snir");
+exit(); 
+}
+
 if(!isset($_SESSION["name"])){
     // Paramètres de connexion à la base de données
     $host = "";
     $dbname = "";
     $username = "";
     $password = "";
+
 
     // Chaîne de connexion PDO
     $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
@@ -32,7 +38,7 @@ if(!isset($_SESSION["name"])){
                     $_SESSION['email'] = $user['email'];
                     $_SESSION['password'] = $password;
                     $_SESSION['id_membre'] = $user['id_membre'];
-                    header('Location: /pages/espace-membre'); 
+                    header('Location: /pages/espace_snir'); 
                 } else {
                     echo "<script type='text/javascript'>alert('Les identifiants que tu as mis ne sont pas corrects.');</script>";
                 }
@@ -66,7 +72,7 @@ if(!isset($_SESSION["name"])){
                                     $_SESSION['email'] = $email;
                                     $_SESSION['password'] = $password;
                                     $_SESSION['id_membre'] = $recupUser->fetch()['id_membre'];
-                                    header('Location: /pages/espace-membre'); 
+                                    header('Location: /pages/espace_snir'); 
                                 }
                             } else {
                                 echo "<script type='text/javascript'>alert('Les mots de passe ne correspondent pas.');</script>";
@@ -79,7 +85,7 @@ if(!isset($_SESSION["name"])){
                 }
             }
         }
-    }  
+    }
 ?>
 
 <!DOCTYPE html>
@@ -100,7 +106,7 @@ if(!isset($_SESSION["name"])){
                 <button class="signinbtn">Connexion</button>
             </div>
             <div class="box signup">
-                <h2>Déjà un compte ?</h2>
+                <h2>Pas de compte ?</h2>
                 <button class="signupbtn">Inscription</button>
             </div>
         </div>
@@ -113,7 +119,10 @@ if(!isset($_SESSION["name"])){
                     <input type="password" name="confirm_password" id="password2" placeholder="Confirmer mot de passe" required>
                     <label for="show-password">Afficher les mots de passe <input type="checkbox" id="show-password-login"></label>
                     <input type="submit" name="login" value="Connecter">
-                </form> 
+                </form>
+                <div class="btnbefore">
+                    <button class="signinbtnafter">Pas de compte ?</button>
+                </div>
             </div>
             <div class="form signupform">
                 <form method="POST">
@@ -124,40 +133,13 @@ if(!isset($_SESSION["name"])){
                     <input type="password" name="confirm_password" id="password4" placeholder="Confirmer mot de passe" required>
                     <label for="show-password">Afficher les mots de passe <input type="checkbox" id="show-password-register"></label>
                     <input type="submit" name="register" value="S'inscrire">
-                </form> 
+                </form>
+                <div class="btnbefore">
+                    <button class="signupbtnafter">Déjà un compte ?</button>
+                </div>
             </div>
         </div>
     </div>
-
-    <script>
-        //affiche le mot de passe dans le formulaire
-        const showPasswordCheckbox1 = document.getElementById("show-password-login");
-        const passwordField1 = document.getElementById("password1");
-        const passwordField2 = document.getElementById("password2");
-        const showPasswordCheckbox2 = document.getElementById("show-password-register");
-        const passwordField3 = document.getElementById("password3");
-        const passwordField4 = document.getElementById("password4");
-
-        showPasswordCheckbox1.addEventListener("change", function () {
-            if (showPasswordCheckbox1.checked) {
-                passwordField1.type = "text";
-                passwordField2.type = "text";
-            } else {
-                passwordField1.type = "password";
-                passwordField2.type = "password";
-            }
-        });
-        showPasswordCheckbox2.addEventListener("change", function () {
-            if (showPasswordCheckbox2.checked) {
-                passwordField3.type = "text";
-                passwordField4.type = "text";
-            } else {
-                passwordField3.type = "password";
-                passwordField4.type = "password";
-            }
-        });
-    </script>
-
     <script src="/scripts/auth.js"></script>
 </body>
 </html>

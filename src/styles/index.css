@@ -14,7 +14,6 @@
 *{
     margin: 0;
     padding: 0;
-    /* font-family: 'Poppins', sans-serif; */
     font-family: 'Trip Sans';
     box-sizing: border-box;
 }
@@ -57,9 +56,6 @@ nav{
     text-decoration: none;
     color: #fff;
 }
-.logo span{
-    color: #3DC6AB;
-}
 nav ul li{
     display: inline-block;
     list-style: none;
@@ -75,7 +71,7 @@ nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #3DC6AB;
+    background: #03a9f4;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -93,14 +89,14 @@ nav ul li a:hover::after{
     color: #fff;
 }
 .header-text u{
-    text-decoration-color: #3DC6AB;
+    text-decoration-color: #03a9f4;
 }
 .header-text h1{
     font-size: 60px;
     margin-top: 20px;
 }
-.header-text h1 span{
-    color: #3DC6AB;
+.header-text h1 span #texte{
+    color: #03a9f4;
 }
 .btnscroll i{
     font-size: 40px;
@@ -117,6 +113,8 @@ nav ul li a:hover::after{
 }
 /* ------------------ Présentation ------------------ */
 #about{
+    width: 100%;
+    height: 100vh;
     padding: 80px 0;
     color: #ababab;
 }
@@ -186,7 +184,9 @@ nav ul li a:hover::after{
 }
 /* ------------------ Compétence ------------------ */
 #knowledge{
-    padding: 30px 0;
+    width: 100%;
+    height: 100vh;
+    padding: 80px 0;
 }
 .knowledge-list{
     display: grid;
@@ -203,8 +203,9 @@ nav ul li a:hover::after{
     transition: .3s, transform .5s;
 }
 .knowledge-list div i{
-    font-size: 50px;
-    margin-bottom: 30px;
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-right: 20px;
 }
 .knowledge-list div h2{
     font-size: 30px;
@@ -229,7 +230,9 @@ nav ul li a:hover::after{
 }
 /* ------------------ Centres d'intérêts ------------------ */
 #portfolio{
-    padding: 50px 0;
+    width: 100%;
+    height: 100vh;
+    padding: 80px 0;
 }
 .work-list{
     display: grid;
@@ -247,12 +250,13 @@ nav ul li a:hover::after{
     aspect-ratio: 3/4;
     border-radius: 10px;
     display: block;
-    transition: transform .5s;
+    transition: transform .3s;
+    object-fit: cover;
 }
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6),#ababab);
+    background: linear-gradient(rgba(0,0,0,0.2),#ababab);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -265,7 +269,7 @@ nav ul li a:hover::after{
     padding: 0 40px;
     text-align: center;
     font-size: 14px;
-    transition: height .5s;
+    transition: height .2s;
 }
 .layer h3{
     font-size: 500;
@@ -291,11 +295,16 @@ nav ul li a:hover::after{
     height: 100%;
 }
 /* ------------------ Contact ------------------ */
+#contact{
+    width: 100%;
+    height: 80vh;
+    padding: 50px 0;
+}
 .contact-left{
     flex-basis: 35%;
 }
 .contact-right{
-    flex-basis: 60%;
+    flex-basis: 55%;
 }
 .contact-left p{
     margin-top: 30px;
@@ -333,12 +342,12 @@ nav ul li a:hover::after{
     margin: 50px auto;
     width: fit-content;
     border: 1px solid #ababab;
-    padding: 14px 50px;
+    padding: 14px 3%;
     border-radius: 6px;
     text-decoration: none;
     color: #fff;
     transition: .5s;
-} 
+}
 .btn:hover{
     background: #ababab;
     color: #080808;
@@ -361,9 +370,11 @@ form input, form textarea{
 }
 form .btn{
     color: #000000;
-    padding: 14px 60px;
+    display: flex;
+    padding: 14px 3%;
     font-size: 19px;
     margin-top: 20px;
+    margin-right: auto;
     cursor: pointer;
     background: #696969;
 }
@@ -382,18 +393,20 @@ form .btn{
 }
 .btnLogout{
     color: #03a9f4;
-    padding: 14px 60px;
-    font-size: 19px;
-    margin-top: 20px;
+    font-size: 15px;
+    margin-top: 10px;
     cursor: pointer;
     background: #696969;
     display: inline-block;
     width: fit-content;
     border: 1px solid #ababab;
-    padding: 10px 40px;
+    padding: 5px 1%;
     border-radius: 6px;
     text-decoration: none;
     transition: .5s;
+}
+.btnLogout i{
+    margin-left: 5px;
 }
 .btnLogout:hover{
     background: #ababab;
@@ -407,7 +420,8 @@ nav .fas{
 @media only screen and (max-width:900px){
     /* ------------------ Header ------------------ */
     #header{
-        background-image: url(/src/styles/img/background.png);
+        width: 100%;
+        height: 100vh;
     }
     .header-text{
         margin-top: 150%;
@@ -433,17 +447,19 @@ nav .fas{
     }
     nav ul{
         z-index: 13;
-        background-color: #ababab;
+        background-color: #14316e8c;
         position: fixed;
         top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 60px;
+        right: -100%;
+        width: 100%;
+        height: 1000%;
+        padding-top: 30%;
         transition: right .5s;
     }
     nav ul li{
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin: 25px;
     }
     nav ul .fas{
@@ -458,7 +474,11 @@ nav .fas{
         bottom: 30px;
         right: 10%;
     }
-    /* ------------------ About ------------------ */
+    /* ------------------ Présentation ------------------ */
+    #about{
+        width: auto;
+        height: auto;
+    }
     .sub-title{
         font-size: 40px;
     }
@@ -473,9 +493,26 @@ nav .fas{
     }
     .tab-links{
         font-size: 16px;
-        margin-right: 20px;
+        margin-right: auto;
+    }
+    /* ------------------ Compétence ------------------ */
+    #knowledge{
+        width: auto;
+        height: auto;
+    }
+    .knowledge-list div i{
+        margin-right: 15px;
+    }
+    /* ------------------ Centres d'intérêts ------------------ */
+    #portfolio{
+        width: auto;
+        height: auto;
     }
     /* ------------------ Contact ------------------ */
+    #contact{
+        width: auto;
+        height: auto;
+    }
     .contact-left, .contact-right{
         flex-basis: 100%;
     }

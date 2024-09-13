@@ -4,9 +4,8 @@ function openmenu(){
     sidemenu.style.right = "0";
 }
 function closemenu(){
-    sidemenu.style.right = "-200px";
+    sidemenu.style.right = "-100%";
 }
-
 
 
 //Les volets dans la présentation
@@ -23,3 +22,11 @@ function opentab(tabname){
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
 }
+
+
+// Animation d'écriture de texte
+var typed = new Typed('.auto-type', {
+    strings: ['Bienvenue sur mon <span id="texte">profil</span>.^3000', 'Descends pour en savoir <span id="texte">plus</span>.'],
+    typeSpeed: 50,
+    backSpeed: 100,
+});

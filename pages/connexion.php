@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION["name"])){
-    header("Location: /pages/espace_snir");
+    header("Location: annexes");
 exit(); 
 }
 
@@ -37,7 +37,7 @@ if(!isset($_SESSION["name"])){
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['password'] = $password;
                 $_SESSION['id_membre'] = $user['id_membre'];
-                header('Location: /pages/espace_snir'); 
+                header('Location: annexes'); 
             } else {
                 echo "<script type='text/javascript'>alert('Les identifiants que tu as mis ne sont pas corrects.');</script>";
             }
@@ -68,7 +68,7 @@ if(!isset($_SESSION["name"])){
                                     $_SESSION['email'] = $email;
                                     $_SESSION['password'] = $password;
                                     $_SESSION['id_membre'] = $recupUser->fetch()['id_membre'];
-                                    header('Location: /pages/espace_snir'); 
+                                    header('Location: annexes');
                                 }
                             } else {
                                 echo "<script type='text/javascript'>alert('Les mots de passe ne correspondent pas.');</script>";
@@ -91,7 +91,7 @@ if(!isset($_SESSION["name"])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/src/styles/img/lock.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/src/styles/connexion.css">
+    <link rel="stylesheet" href="/src/styles/auth.css">
     <title>Authentification</title>
 </head>
 <body>
